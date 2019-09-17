@@ -18,9 +18,9 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "rake", "~> 12.0"
 
   spec.add_development_dependency "jekyll-feed", "~> 0.6"
-  spec.add_development_dependency "jekyll-seo-tag"
-  spec.add_development_dependency "jekyll-paginate-v2"
-  spec.add_development_dependency "rouge"
-  spec.add_development_dependency "jekyll-archives"
+  spec.add_development_dependency "jekyll-seo-tag", "~> 2.6.1"
+  spec.add_development_dependency "jekyll-paginate-v2", "~> 1.5.2"
+  spec.add_development_dependency "rouge", "~> 3.9.0"
+  spec.add_development_dependency "jekyll-archives", "~> 2.2.1"
 
 end
