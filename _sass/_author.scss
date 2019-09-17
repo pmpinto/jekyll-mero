@@ -1,0 +1,32 @@
+.author {
+    margin-top: $spacing-unit-tiny;
+    font-family: $font-family-body;
+    font-size: $font-size-caption;
+    font-weight: $font-weight-regular;
+    line-height: $font-line-height-body;
+    color: $color-text;
+}
+
+.author__name {
+}
+
+.author__text {
+    font-size: $font-size-caption;
+    margin: 0;
+    color: $color-detail;
+    font-style: normal;
+}
+
+.author__at {
+    color: fade-out($color: $color-highlight, $amount: 0.618);
+}
+
+.author__link {
+    color: $color-highlight;
+    text-decoration-color: fade-out($color: $color-highlight, $amount: 0.854);
+
+    &:hover {
+        text-decoration: underline;
+        text-decoration-color: $color-highlight;
+    }
+}

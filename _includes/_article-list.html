@@ -1,0 +1,14 @@
+<ol class="article-list">
+    {% for post in include.posts %}
+    <li class="article-list__item">
+        <h3 class="article-list__heading">
+            <a
+                href="{{ post.url | prepend: site.baseurl }}"
+                class="article-list__link"
+                >{{ post.title }}</a
+            >
+        </h3>
+        <p class="article-list__excerpt">{{ post.excerpt | strip_html }}</p>
+    </li>
+    {% endfor %}
+</ol>

@@ -1,0 +1,18 @@
+---
+layout: default
+---
+
+<article class="error">
+    <div class="page__wrapper">
+        <h1 class="error__title">{{ page.error_code }}</h1>
+
+        <div class="error__content">
+            {{ page.content }}
+
+            <p class="error__text">
+                Perhaps you need a ride back
+                <a href="{{ site.baseurl }}/" class="error__link">home</a>?
+            </p>
+        </div>
+    </div>
+</article>

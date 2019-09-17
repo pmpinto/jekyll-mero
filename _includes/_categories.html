@@ -1,0 +1,12 @@
+<ul>
+    {% for category in site.categories %}
+    <li>
+        <h1>{{ category[0] }}</h1>
+        <ul>
+            {% for post in category[1] %}
+            <li>{{ post.title }}</li>
+            {% endfor %}
+        </ul>
+    </li>
+    {% endfor %}
+</ul>

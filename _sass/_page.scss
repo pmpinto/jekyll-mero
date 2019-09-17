@@ -1,0 +1,17 @@
+.page {
+}
+
+.page__wrapper {
+    margin-top: $spacing-unit-big;
+    max-width: $content-width-sm;
+    padding: 5% 0;
+    margin: 0 auto;
+
+    @media ($md) {
+        max-width: $content-width-md;
+    }
+
+    @media ($xlg) {
+        max-width: $content-width-xlg;
+    }
+}

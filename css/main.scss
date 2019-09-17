@@ -1,0 +1,82 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+sitemap: false
+---
+
+@charset "utf-8";
+
+// #################################################################################################
+// Imports
+// Import partials from `sass_dir` (defaults to `_sass`)
+// Do not make any changes to this file. Go to /_sass and find the appropriate SCSS file and make changes there.
+
+@import "normalize.css";
+@import "syntax-highlight.css";
+
+@import "_variables";
+@import "_fonts";
+@import "utils/_functions";
+@import "utils/_mixins";
+
+@import "_layout-default";
+@import "_layout-post";
+@import "_layout-category";
+@import "_layout-error";
+@import "_about";
+
+// #################################################################################################
+// Global styles
+
+// Fluid typography
+html,
+body {
+    background-color: $color-background;
+    font-size: 4vw;
+
+    @media ($sm) {
+        font-size: 3vw;
+    }
+
+    @media ($md) {
+        font-size: 2.5vw;
+    }
+
+    @media ($lg) {
+        font-size: 1.8vw;
+    }
+
+    @media ($xlg) {
+        font-size: 1.5vw;
+    }
+}
+
+// Text selection colors
+::selection {
+    background: fade-out($color: $color-highlight, $amount: 0.618);
+    color: #000;
+}
+
+::-moz-selection {
+    background: fade-out($color: $color-highlight, $amount: 0.618);
+    color: #000;
+}
+
+// Sticky footer
+html,
+body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+
+    > main {
+        flex-grow: 1;
+        margin-bottom: rem(57.887); // Margin for fixed navigation
+
+        @media ($lg) {
+            margin-bottom: 0;
+        }
+    }
+}

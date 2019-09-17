@@ -1,0 +1,31 @@
+---
+layout: default
+---
+
+<article class="post">
+    <div class="page__wrapper">
+        <h1 class="post__title">{{ page.title }}</h1>
+
+        <time class="post__date" datetime="{{ page.date | date: "%Y-%m-%d" }}">
+            {{ page.date | date: "%B %d, %Y" }}
+        </time>
+
+        <div class="post__content">
+            {{ page.content }}
+        </div>
+
+        {% if page.categories.size > 0 %}
+            {% include _category-list.html %}
+        {% endif %}
+
+        {%- comment -%}
+            Add the post author if available, otherwise add the blog author.
+        {%- endcomment -%}
+        {% if page.author %}
+            {% include _author.html author=page.author %}
+        {% else %}
+            {% include _author.html author=site.author %}
+        {% endif %}
+
+    </div>
+</article>

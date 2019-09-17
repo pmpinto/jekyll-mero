@@ -1,0 +1,262 @@
+// Automatically generated content through markdown parser
+@mixin markdown-content() {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-family: $font-family-heading;
+        font-weight: $font-weight-regular;
+        line-height: $font-line-height-heading;
+        margin: 0;
+        margin-top: $spacing-unit-big;
+        margin-bottom: $spacing-unit-medium;
+        font-size: $font-size-caption;
+
+        a {
+            color: $color-text;
+            text-decoration: none;
+            position: relative;
+
+            &:hover {
+                text-decoration: underline;
+                text-decoration-color: $color-highlight;
+
+                &::before {
+                    display: block;
+                }
+            }
+
+            &::before {
+                content: "§";
+                display: none;
+                margin-right: $spacing-unit-tiny;
+                color: $color-detail;
+                font-size: 0.618em;
+                font-family: $font-family-body;
+                font-weight: $font-weight-regular;
+                position: absolute;
+                left: -1em;
+                bottom: 0.618em;
+            }
+        }
+    }
+
+    h1 {
+        font-size: $font-size-subheading;
+    }
+
+    h2 {
+        font-size: $font-size-body;
+    }
+
+    p {
+        margin: $spacing-unit-small 0;
+
+        code {
+            padding: 0 $spacing-unit-tiny;
+        }
+    }
+
+    p.lead {
+        font-size: $font-size-subheading;
+    }
+
+    strong {
+        font-weight: $font-weight-bold;
+    }
+
+    code {
+        font-family: $font-family-heading;
+        background-color: $color-code-background;
+        color: $color-code;
+        border-radius: rem(4.236);
+    }
+
+    a {
+        color: $color-highlight;
+        text-decoration-color: fade-out(
+            $color: $color-highlight,
+            $amount: 0.854
+        );
+
+        &:hover {
+            text-decoration: underline;
+            text-decoration-color: $color-highlight;
+        }
+    }
+
+    ul,
+    ol {
+        margin: $spacing-unit-small 0;
+        padding-left: $spacing-unit-small;
+        list-style: none;
+
+        li {
+            &::before {
+                display: inline-block;
+                color: $color-highlight;
+                margin-right: $spacing-unit-small;
+                font-family: $font-family-heading;
+                font-weight: $font-weight-regular;
+            }
+        }
+    }
+
+    ul {
+        > li {
+            &::before {
+                content: "•";
+                font-size: $font-size-body;
+            }
+        }
+    }
+
+    ol {
+        counter-reset: ordered-list-item-count;
+
+        > li {
+            counter-increment: ordered-list-item-count;
+
+            &::before {
+                content: counter(ordered-list-item-count);
+                font-size: $font-size-caption;
+            }
+        }
+    }
+
+    blockquote {
+        margin: $spacing-unit-big 0;
+        display: flex;
+        align-items: flex-start;
+        position: relative;
+        background-color: $color-code-background;
+        border-radius: rem(4.236);
+
+        &::before {
+            content: "“";
+            color: $color-detail;
+            font-family: $font-family-heading;
+            font-size: $font-size-mega;
+            line-height: $font-line-height-heading;
+            position: absolute;
+            left: calc(-#{$spacing-unit-medium} - #{$spacing-unit-tiny});
+            top: calc(-#{$spacing-unit-medium} - #{$spacing-unit-medium});
+            pointer-events: none;
+        }
+
+        p {
+            margin: $spacing-unit-medium $spacing-unit-medium;
+            font-family: $font-family-body;
+            font-size: $font-size-subheading;
+            color: $color-text;
+            line-height: $font-line-height-body;
+            font-weight: $font-weight-regular;
+        }
+    }
+
+    figure {
+        margin: $spacing-unit-medium 0;
+
+        img {
+            max-width: 100%;
+            border-radius: rem(4.236);
+        }
+
+        figcaption {
+            font-family: $font-family-body;
+            font-size: $font-size-caption;
+            color: $color-detail;
+            line-height: $font-line-height-body;
+            font-weight: $font-weight-regular;
+            text-align: center;
+        }
+    }
+
+    figure.highlight {
+        .lineno {
+            min-width: 2em;
+            user-select: none;
+            color: fade-out($color: $color-code, $amount: 0.618);
+            font-size: $font-size-body;
+        }
+
+        code {
+            display: block;
+            padding: $spacing-unit-small;
+            position: relative;
+            overflow-x: scroll;
+
+            &::before {
+                content: attr(data-lang);
+                position: absolute;
+                right: $spacing-unit-tiny;
+                top: $spacing-unit-tiny;
+                color: $color-code;
+                font-family: $font-family-heading;
+                font-size: $font-size-caption;
+                line-height: $font-line-height-heading;
+                font-weight: $font-weight-regular;
+            }
+        }
+
+        pre {
+            font-family: $font-family-heading;
+            margin: 0;
+            font-size: $font-size-body;
+        }
+    }
+
+    table:not(.rouge-table) {
+        margin: $spacing-unit-medium 0;
+        width: 100%;
+        border-collapse: collapse;
+
+        td,
+        th {
+            font-size: $font-size-body;
+            font-weight: $font-weight-regular;
+            line-height: $font-line-height-body;
+            // border: rem(1) solid $color-detail;
+            padding: $spacing-unit-tiny;
+        }
+
+        th {
+            font-family: $font-family-heading;
+            font-size: $font-size-caption;
+            color: $color-detail;
+            background-color: #fff;
+        }
+
+        td {
+            color: $color-text;
+            background-color: $color-background;
+        }
+
+        tbody {
+            tr {
+                // transition: transform $transition-fast,
+                // box-shadow $transition-fast;
+
+                &:nth-child(even) {
+                    td {
+                        background-color: fade-out(
+                            $color: $color-detail,
+                            $amount: 0.892
+                        );
+                    }
+                }
+
+                &:hover {
+                    td {
+                        background-color: fade-out(
+                            $color: $color-detail,
+                            $amount: 0.618
+                        );
+                    }
+                }
+            }
+        }
+    }
+}

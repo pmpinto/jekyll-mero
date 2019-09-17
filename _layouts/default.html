@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+        <link
+            rel="apple-touch-icon"
+            sizes="180x180"
+            href="{{ site.baseurl }}/apple-touch-icon.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="{{ site.baseurl }}/favicon-32x32.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="{{ site.baseurl }}/favicon-16x16.png"
+        />
+        <link rel="manifest" href="{{ site.baseurl }}/site.webmanifest" />
+        <link
+            rel="mask-icon"
+            href="{{ site.baseurl }}/safari-pinned-tab.svg"
+            color="#c14953"
+        />
+        <meta name="msapplication-TileColor" content="#f4f2f3" />
+        <meta name="theme-color" content="#c14953" />
+
+        <link
+            rel="alternate"
+            type="application/rss+xml"
+            href="{{ site.url }}/feed.xml"
+            title="{{ site.title }}"
+        />
+
+        <link rel="stylesheet" href="{{ site.baseurl }}/css/main.css" />
+
+        {% seo %}
+    </head>
+
+    <body>
+        {% include _navigation.html %}
+        <main>
+            {{ content }}
+        </main>
+
+        {% include _footer.html %}
+        <!--  -->
+        {% include _scripts.html %}
+    </body>
+</html>

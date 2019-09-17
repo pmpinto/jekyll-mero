@@ -1,0 +1,81 @@
+@import "utils/_functions";
+
+// #################################################################################################
+// Type
+
+$font-family-sans: "work-sans", sans-serif;
+$font-family-mono: "space-mono", monospace;
+
+$font-family-heading: $font-family-mono;
+$font-family-body: $font-family-sans;
+
+$font-size-mega: rem(177.424);
+$font-size-jumbo: rem(67.773);
+$font-size-heading: rem(41.887);
+$font-size-subheading: rem(25.888);
+$font-size-body: rem(16);
+$font-size-caption: rem(13.665);
+
+$font-line-height-body: 1.618;
+$font-line-height-heading: 1;
+
+$font-weight-light: 200;
+$font-weight-regular: 400;
+$font-weight-bold: 600;
+
+// #################################################################################################
+// Spacing
+
+$spacing-unit-tiny: rem(9.889);
+$spacing-unit-small: rem(16);
+$spacing-unit-medium: rem(25.888);
+$spacing-unit-big: rem(67.773);
+$spacing-unit-jumbo: rem(109.656);
+
+// #################################################################################################
+// Color
+
+$color-white: #f4f2f3;
+$color-grey: #93827f;
+$color-black: #353535;
+$color-red: #c14953;
+$color-orange: #ed9b40;
+
+$color-text: $color-black;
+$color-background: $color-white;
+$color-brand: $color-red;
+$color-highlight: $color-brand;
+$color-detail: $color-grey;
+
+$color-code-background: fade-out(
+    $color: $color-detail,
+    $amount: 0.854
+);
+$color-code: darken(
+    $color: $color-detail,
+    $amount: 6.854%
+);
+
+// #################################################################################################
+// Breakpoints
+
+$content-width-sm: 84%;
+$content-width-md: 74.12%;
+$content-width-xlg: 58.12%;
+
+$breakpoint-sm: 30em; // 480px
+$breakpoint-md: 48em; // 768px
+$breakpoint-lg: 64em; // 1024px
+$breakpoint-xlg: 90em; // 1440px
+
+$sm: "min-width: #{$breakpoint-sm}";
+$md: "min-width: #{$breakpoint-md}";
+$lg: "min-width: #{$breakpoint-lg}";
+$xlg: "min-width: #{$breakpoint-xlg}";
+
+// #################################################################################################
+// Transition
+
+$transition-fast: 150ms ease-in-out;
+$transition-normal: 500ms ease-in-out;
+$transition-slow: 850ms ease-in-out;

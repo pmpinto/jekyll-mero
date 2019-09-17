@@ -1,0 +1,29 @@
+.post {
+}
+
+.post__title {
+    font-size: $font-size-heading;
+    font-family: $font-family-heading;
+    color: $color-text;
+    line-height: $font-line-height-heading;
+    font-weight: $font-weight-regular;
+    margin: 0;
+}
+
+.post__date {
+    font-family: $font-family-heading;
+    font-weight: $font-weight-regular;
+    font-size: $font-size-caption;
+    color: $color-detail;
+    line-height: $font-line-height-body;
+}
+
+.post__content {
+    font-size: $font-size-body;
+    color: $color-text;
+    font-family: $font-family-body;
+    line-height: $font-line-height-body;
+    margin: $spacing-unit-medium 0;
+
+    @include markdown-content();
+}

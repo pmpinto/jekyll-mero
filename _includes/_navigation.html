@@ -1,0 +1,66 @@
+<nav class="navigation">
+    <ul class="navigation__list">
+        <li class="navigation__item navigation__item--home">
+            <a
+                href="{{ site.baseurl }}/"
+                class="navigation__link"
+                aria-label="Go back home"
+            >
+                <span class="navigation__icon">
+                    {% include icons/_icon-home.svg %}
+                </span>
+            </a>
+        </li>
+        <li class="navigation__item">
+            <a
+                href="{{ site.baseurl }}/about/"
+                class="navigation__link"
+                aria-label="Go to about page"
+            >
+                <span class="navigation__icon">
+                    {% include icons/_icon-user.svg %}
+                </span>
+            </a>
+        </li>
+
+        <li class="navigation__item navigation__item--category">
+            <button
+                class="navigation__button js-category-toggle"
+                aria-label="Toggle list of categories"
+            >
+                <span class="navigation__icon">
+                    {% include icons/_icon-categories.svg %}
+                </span>
+            </button>
+            <ul class="navigation__sublist">
+                {% for category in site.categories %} {% assign category_slug =
+                category | first | slugify %}
+                <li class="navigation__item">
+                    <span class="navigation__muted">#</span
+                    ><a
+                        href="{{ site.jekyll-archives.permalinks.category | prepend: site.baseurl | replace: ':name', category_slug }}"
+                        class="navigation__link"
+                        >{{ category | first | slugify }}</a
+                    >
+                    <span class="navigation__amount">
+                        <span class="navigation__muted">{{
+                            category | last | size
+                        }}</span>
+                    </span>
+                </li>
+                {% endfor %}
+            </ul>
+        </li>
+
+        <!-- <li class="navigation__item navigation__item--theme-toggle">
+            <button
+                class="navigation__button js-theme-toggle"
+                aria-label="Change to dark theme"
+            >
+                <span class="navigation__icon">
+                    {% include icons/_icon-invert.svg %}
+                </span>
+            </button>
+        </li> -->
+    </ul>
+</nav>

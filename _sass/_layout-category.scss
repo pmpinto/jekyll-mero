@@ -1,0 +1,16 @@
+.category__heading {
+    font-family: $font-family-heading;
+    font-weight: $font-weight-regular;
+    font-size: $font-size-heading;
+    line-height: $font-line-height-heading;
+    color: $color-detail;
+    margin-bottom: $spacing-unit-big;
+}
+
+.category__muted {
+    color: fade-out($color: $color-text, $amount: 0.618);
+}
+
+.category__amount {
+    font-size: $font-size-subheading;
+}

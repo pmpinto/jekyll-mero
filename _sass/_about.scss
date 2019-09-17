@@ -1,0 +1,48 @@
+.about {
+}
+
+.about__title {
+    font-size: $font-size-heading;
+    font-family: $font-family-heading;
+    font-weight: $font-weight-regular;
+    line-height: $font-line-height-body;
+    color: $color-text;
+}
+
+.about__text {
+    font-family: $font-family-body;
+    font-size: $font-size-body;
+    font-weight: $font-weight-regular;
+    line-height: $font-line-height-body;
+    color: $color-text;
+}
+
+.about__text--lead {
+    font-size: $font-size-subheading;
+}
+
+.about__text--small {
+    font-size: $font-size-caption;
+}
+
+.about__link {
+    color: $color-highlight;
+    text-decoration-color: fade-out($color: $color-highlight, $amount: 0.854);
+
+    &:hover {
+        text-decoration: underline;
+        text-decoration-color: $color-highlight;
+    }
+}
+
+.about__muted {
+    color: fade-out($color: $color-text, $amount: 0.618);
+}
+
+.about__footer {
+    margin-top: $spacing-unit-big;
+
+    .about__text {
+        color: $color-detail;
+    }
+}

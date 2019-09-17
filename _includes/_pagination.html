@@ -1,0 +1,66 @@
+{%- comment -%} Logic for pagination trail Ugly AF, but until jekyll-paginate-v2
+works with jekyll 4.0.0 that's what we get {%- endcomment -%} {% assign
+trail_begin = paginator.page | minus: site.pagination.trail.before %} {% assign
+trail_end = paginator.page | plus: site.pagination.trail.after %} {% if
+trail_begin < 1 %} {% assign trail_begin = 1 %} {% endif %} {% if trail_end >
+paginator.total_pages %} {% assign trail_end = paginator.total_pages %} {% endif
+%}
+<!--  -->
+{% if paginator.total_pages > 1 %}
+<div class="pagination">
+    <ol class="pagination__list">
+        <!-- PREVIOUS BUTTON -->
+        <li class="pagination__item">
+            <a
+                class="pagination__link pagination__link--prev {{
+                    paginator.previous_page
+                        | default: 'pagination__link--disabled'
+                }}"
+                href="{{
+                    paginator.previous_page_path | prepend: site.baseurl
+                }}"
+            >
+                <div class="pagination__icon">
+                    {% include icons/_icon-chevron-right.svg %}
+                </div>
+            </a>
+        </li>
+
+        <!-- NUMBER BUTTONS -->
+        {% for page in (trail_begin..trail_end) %}
+        <li class="pagination__item">
+            {% if page == paginator.page %}
+            <a
+                class="pagination__link pagination__link--disabled pagination__link--active"
+                >{{ page }}</a
+            >
+            {% elsif page == 1 %}
+            <a class="pagination__link" href="{{ site.baseurl }}/">{{
+                page
+            }}</a>
+            {% else %}
+            <a
+                class="pagination__link"
+                href="{{ site.pagination.permalink | prepend: site.baseurl | replace: ':num', page }}"
+                >{{ page }}</a
+            >
+            {% endif %}
+        </li>
+        {% endfor %}
+
+        <li class="pagination__item">
+            <!-- NEXT BUTTON -->
+            <a
+                class="pagination__link pagination__link--next {{
+                    paginator.next_page | default: 'pagination__link--disabled'
+                }}"
+                href="{{ paginator.next_page_path | prepend: site.baseurl }}"
+            >
+                <div class="pagination__icon">
+                    {% include icons/_icon-chevron-right.svg %}
+                </div>
+            </a>
+        </li>
+    </ol>
+</div>
+{% endif %}

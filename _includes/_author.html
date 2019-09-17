@@ -1,0 +1,22 @@
+<div class="author">
+    {% if include.author.twitter %}
+    <address class="author__text">
+        {%- comment -%}
+        <span class="author__name">— {{ include.author.name }}</span>
+
+        {%- endcomment -%}
+        <span class="author__at">@</span
+        ><a
+            href="http://twitter.com/{{ include.author.twitter }}"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="author__link"
+            aria-label="Post written by {{
+                include.author.name
+            }}. Go to their Twitter page."
+            title="{{ include.author.name }}"
+            >{{ include.author.twitter }}</a
+        >
+    </address>
+    {% endif %}
+</div>

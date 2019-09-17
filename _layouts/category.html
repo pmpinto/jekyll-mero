@@ -1,0 +1,22 @@
+---
+layout: default
+pagination:
+    enabled: true
+---
+
+<div class="page">
+    <div class="page__wrapper">
+        {% include _header.html %}
+        <!--  -->
+        <h2 class="category__heading">
+            <span class="category__muted">#</span
+            ><span>{{ page.title | slugify }}</span>
+            <span class="category__amount">
+                <span class="category__muted">{{ page.posts.size }}</span>
+            </span>
+        </h2>
+        {% include _article-list.html posts=page.posts %}
+        <!--  -->
+        {% include _pagination.html %}
+    </div>
+</div>

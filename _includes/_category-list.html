@@ -1,0 +1,16 @@
+<ul class="category-list">
+    {% for category in page.categories %} {% assign category_slug = category |
+    slugify %}
+    <li class="category-list__item">
+        <span class="category-list__hashtag">#</span
+        ><a
+            href="{{ site.jekyll-archives.permalinks.category | prepend: site.baseurl | replace: ':name', category_slug }}"
+            class="category-list__link"
+            aria-label="This post has the {{
+                category
+            }} category. Read more from this category."
+            >{{ category_slug }}</a
+        >
+    </li>
+    {% endfor %}
+</ul>
