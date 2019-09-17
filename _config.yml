@@ -56,7 +56,6 @@ defaults:
               height: 500
 
 # Build settings
-destination: dist
 markdown: kramdown
 plugins:
     - jekyll-feed
