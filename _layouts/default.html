@@ -23,11 +23,7 @@
             href="{{ site.baseurl }}/favicon-16x16.png"
         />
         <link rel="manifest" href="{{ site.baseurl }}/site.webmanifest" />
-        <link
-            rel="mask-icon"
-            href="{{ site.baseurl }}/safari-pinned-tab.svg"
-            color="#c14953"
-        />
+        <link rel="mask-icon" href="{{ site.baseurl }}/safari-pinned-tab.svg" color="#c14953" />
         <meta name="msapplication-TileColor" content="#f4f2f3" />
         <meta name="theme-color" content="#c14953" />
 
@@ -38,15 +34,12 @@
             title="{{ site.title }}"
         />
 
-        <link
-            rel="stylesheet"
-            href="{{ site.baseurl }}/assets/css/jekyll-mero.css"
-        />
+        <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/jekyll-mero.css" />
 
         {% seo %}
     </head>
 
-    <body>
+    <body class="preload">
         {% include _navigation.html %}
         <main>
             {{ content }}

@@ -27,6 +27,12 @@ sitemap: false
 // #################################################################################################
 // Global styles
 
+// Prevent transitions from firing on page load
+// https://css-tricks.com/transitions-only-after-page-load/
+.preload * {
+    transition: none !important;
+}
+
 // Fluid typography
 html,
 body {
