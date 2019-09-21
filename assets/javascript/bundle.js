@@ -98,6 +98,18 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 
 /***/ }),
 
+/***/ "./assets/javascript/Headings.es6.js":
+/*!*******************************************!*\
+  !*** ./assets/javascript/Headings.es6.js ***!
+  \*******************************************/
+/*! exports provided: Headings */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"Headings\", function() { return Headings; });\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nfunction _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }\n\nfunction _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }\n\nvar Headings =\n/*#__PURE__*/\nfunction () {\n  function Headings() {\n    _classCallCheck(this, Headings);\n\n    this.headings = document.querySelectorAll(\"h1[id], h2[id], h3[id], h4[id], h5[id], h6[id]\");\n    this.addLinks();\n  }\n\n  _createClass(Headings, [{\n    key: \"addLinks\",\n    value: function addLinks() {\n      this.headings.forEach(function (heading) {\n        var id = heading.getAttribute(\"id\");\n        var content = heading.innerHTML;\n        heading.innerHTML = \"<a href=\\\"#\".concat(id, \"\\\">\").concat(content, \"</a>\");\n      });\n    }\n  }]);\n\n  return Headings;\n}();\n\n\n\n//# sourceURL=webpack:///./assets/javascript/Headings.es6.js?");
+
+/***/ }),
+
 /***/ "./assets/javascript/Theme.es6.js":
 /*!****************************************!*\
   !*** ./assets/javascript/Theme.es6.js ***!
@@ -118,7 +130,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _Category_es6_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Category.es6.js */ \"./assets/javascript/Category.es6.js\");\n/* harmony import */ var _Theme_es6_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Theme.es6.js */ \"./assets/javascript/Theme.es6.js\");\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\n\n\n\nvar App = function App() {\n  _classCallCheck(this, App);\n\n  new _Category_es6_js__WEBPACK_IMPORTED_MODULE_0__[\"Category\"]();\n  new _Theme_es6_js__WEBPACK_IMPORTED_MODULE_1__[\"Theme\"]();\n};\n\nnew App();\n\n//# sourceURL=webpack:///./assets/javascript/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _Category_es6_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Category.es6.js */ \"./assets/javascript/Category.es6.js\");\n/* harmony import */ var _Theme_es6_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Theme.es6.js */ \"./assets/javascript/Theme.es6.js\");\n/* harmony import */ var _Headings_es6_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Headings.es6.js */ \"./assets/javascript/Headings.es6.js\");\n\n\n\nnew _Category_es6_js__WEBPACK_IMPORTED_MODULE_0__[\"Category\"]();\nnew _Theme_es6_js__WEBPACK_IMPORTED_MODULE_1__[\"Theme\"]();\nnew _Headings_es6_js__WEBPACK_IMPORTED_MODULE_2__[\"Headings\"]();\n\n//# sourceURL=webpack:///./assets/javascript/index.js?");
 
 /***/ })
 
