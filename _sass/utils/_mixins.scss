@@ -57,6 +57,11 @@
         code {
             padding: 0 $spacing-unit-tiny;
         }
+
+        // Just a placeholder style before JS kicks in, to avoid breaking the layout
+        img {
+            max-width: 100%;
+        }
     }
 
     p.lead {
@@ -76,10 +81,7 @@
 
     a {
         color: $color-highlight;
-        text-decoration-color: fade-out(
-            $color: $color-highlight,
-            $amount: 0.854
-        );
+        text-decoration-color: fade-out($color: $color-highlight, $amount: 0.854);
 
         &:hover {
             text-decoration: underline;
@@ -241,19 +243,13 @@
 
                 &:nth-child(even) {
                     td {
-                        background-color: fade-out(
-                            $color: $color-detail,
-                            $amount: 0.892
-                        );
+                        background-color: fade-out($color: $color-detail, $amount: 0.892);
                     }
                 }
 
                 &:hover {
                     td {
-                        background-color: fade-out(
-                            $color: $color-detail,
-                            $amount: 0.618
-                        );
+                        background-color: fade-out($color: $color-detail, $amount: 0.618);
                     }
                 }
             }

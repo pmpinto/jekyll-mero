@@ -4,7 +4,9 @@ class Category {
         this.itemClassName = "navigation__item"
         this.openClassName = "navigation__item--is-open"
         this.isOpen = false
+    }
 
+    init() {
         this.addEvents()
     }
 
