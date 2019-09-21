@@ -1,5 +1,6 @@
 // Automatically generated content through markdown parser
 @mixin markdown-content() {
+    // Headings
     h1,
     h2,
     h3,
@@ -51,6 +52,7 @@
         font-size: $font-size-body;
     }
 
+    // Paragraphs
     p {
         margin: $spacing-unit-small 0;
 
@@ -64,14 +66,17 @@
         }
     }
 
+    // Highlighted paragraphs
     p.lead {
         font-size: $font-size-subheading;
     }
 
+    // Bold text
     strong {
         font-weight: $font-weight-bold;
     }
 
+    // Inline and block code snippets
     code {
         font-family: $font-family-heading;
         background-color: $color-code-background;
@@ -79,6 +84,7 @@
         border-radius: rem(4.236);
     }
 
+    // Links
     a {
         color: $color-highlight;
         text-decoration-color: fade-out($color: $color-highlight, $amount: 0.854);
@@ -89,6 +95,7 @@
         }
     }
 
+    // Unordered and ordered lists
     ul,
     ol {
         margin: $spacing-unit-small 0;
@@ -128,6 +135,7 @@
         }
     }
 
+    // Quotes
     blockquote {
         margin: $spacing-unit-big 0;
         display: flex;
@@ -158,6 +166,7 @@
         }
     }
 
+    // Standalone images
     figure {
         margin: $spacing-unit-medium 0;
 
@@ -176,7 +185,10 @@
         }
     }
 
+    // Block code snippets
     figure.highlight {
+        position: relative;
+
         .lineno {
             min-width: 2em;
             user-select: none;
@@ -187,7 +199,6 @@
         code {
             display: block;
             padding: $spacing-unit-small;
-            position: relative;
             overflow-x: scroll;
 
             &::before {
@@ -210,6 +221,7 @@
         }
     }
 
+    // Tables
     table:not(.rouge-table) {
         margin: $spacing-unit-medium 0;
         width: 100%;
