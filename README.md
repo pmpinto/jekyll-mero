@@ -3,6 +3,29 @@
 Mero is a light-weight and minimal [Jekyll](https://jekyllrb.com/) theme focused on providing a comfortable reading experience.  
 It's also a 🇵🇹 portuguese word for _genuine_ and _simple_.
 
+## Features
+* Responsive web design.
+* Built with a [modular scale](https://www.modularscale.com/).
+* Fluid typography to make sure users get a similar experience no matter what screen size they're on.
+* Great contrast between main text and background colors.
+* Images with captions.
+* Code snippets.
+* [Material Design Icons](https://material.io/resources/icons/?style=baseline).
+* Handpicked fonts: [Space Mono](https://fonts.google.com/specimen/Space+Mono) + [Work Sans](https://fonts.google.com/specimen/Work+Sans).
+* A modular development approach so it's easier to expand.
+
+# Outline
+* [Features](#features)
+* [Demo](#demo)
+* [Installation](#installation)
+* [Configuration](#configuration)
+* [Options](#options)
+* [Development](#development)
+* [Contributing](#contributing)
+* [License](#license)
+
+# Screenshots
+
 ## Home page
 
 ![Screenshot](https://github.com/pmpinto/jekyll-mero/blob/master/screenshot.png?raw=true)
