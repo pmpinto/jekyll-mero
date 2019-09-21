@@ -21,7 +21,7 @@ jekyll-archives:
 pagination:
     enabled: true
     per_page: 12
-    title: "Page :num"
+    title: ""
     permalink: "/page/:num/"
     trail:
         before: 2
