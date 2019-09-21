@@ -1,3 +1,5 @@
 ---
-layout: index
+layout: home
+pagination:
+    enabled: true
 ---

@@ -16,10 +16,7 @@ source "https://rubygems.org"
 # If you have any plugins, put them here!
 group :jekyll_plugins do
     gem "github-pages", "~> 200"
-    gem "jekyll-feed"
-    gem "jekyll-seo-tag"
     gem "jekyll-paginate-v2"
-    gem "rouge"
     gem "jekyll-archives"
 end
 
