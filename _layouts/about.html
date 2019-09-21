@@ -1,0 +1,18 @@
+---
+title: About
+layout: default
+---
+
+<article class="about">
+    <div class="page__wrapper">
+        {% if page.heading %}
+        <h1 class="about__title">
+            {{ page.heading }}
+        </h1>
+        {% endif %}
+
+        <div class="about__content">
+            {{ page.content }}
+        </div>
+    </div>
+</article>
