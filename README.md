@@ -5,7 +5,7 @@ It's also a 🇵🇹 portuguese word for _genuine_ and _simple_.
 
 ## Features
 * Responsive web design.
-* Built with a [modular scale](https://www.modularscale.com/).
+* Built with a [modular scale](https://www.modularscale.com/?16&px&1.618).
 * Fluid typography to make sure users get a similar experience no matter what screen size they're on.
 * Great contrast between main text and background colors.
 * Images with captions.
