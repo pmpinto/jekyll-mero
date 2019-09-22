@@ -4,25 +4,28 @@ Mero is a light-weight and minimal [Jekyll](https://jekyllrb.com/) theme focused
 It's also a 🇵🇹 portuguese word for _genuine_ and _simple_.
 
 ## Features
-* Responsive web design.
-* Built with a [modular scale](https://www.modularscale.com/?16&px&1.618).
-* Fluid typography to make sure users get a similar experience no matter what screen size they're on.
-* Great contrast between main text and background colors.
-* Images with captions.
-* Code snippets.
-* [Material Design Icons](https://material.io/resources/icons/?style=baseline).
-* Handpicked fonts: [Space Mono](https://fonts.google.com/specimen/Space+Mono) + [Work Sans](https://fonts.google.com/specimen/Work+Sans).
-* A modular development approach so it's easier to expand.
+
+-   Responsive web design.
+-   Built with a [modular scale](https://www.modularscale.com/?16&px&1.618).
+-   Fluid typography to make sure users get a similar experience no matter what screen size they're on.
+-   Great contrast between main text and background colors.
+-   Images with captions.
+-   Code snippets.
+-   [Material Design Icons](https://material.io/resources/icons/?style=baseline).
+-   Handpicked fonts: [Space Mono](https://fonts.google.com/specimen/Space+Mono) + [Work Sans](https://fonts.google.com/specimen/Work+Sans).
+-   A modular development approach so it's easier to expand.
 
 # Outline
-* [Features](#features)
-* [Demo](#demo)
-* [Installation](#installation)
-* [Configuration](#configuration)
-* [Options](#options)
-* [Development](#development)
-* [Contributing](#contributing)
-* [License](#license)
+
+-   [Features](#features)
+-   [Demo](#demo)
+-   [Installation](#installation)
+-   [Configuration](#configuration)
+-   [Options](#options)
+-   [Development](#development)
+-   [Contributing](#contributing)
+-   [License](#license)
+-   [Donations](#donations)
 
 # Screenshots
 
@@ -283,3 +286,9 @@ If you'd like to contribute feel free to fork this repo and do as many pull requ
 # License
 
 The theme is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
+
+# Donations
+
+If you like the theme and you feel like throwing some candy my way, click the button below and you'll be able to pick just the right amount. Thanks in advance 🙏
+
+[![](https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif)](https://www.paypal.me/pmpintopt)
