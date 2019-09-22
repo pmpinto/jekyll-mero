@@ -28,11 +28,11 @@ It's also a 🇵🇹 portuguese word for _genuine_ and _simple_.
 
 ## Home page
 
-![Screenshot](https://github.com/pmpinto/jekyll-mero/blob/master/screenshot.png?raw=true)
+![Screenshot](https://github.com/pmpinto/jekyll-mero/blob/master/screenshots/screenshot.png?raw=true)
 
 ## Post page
 
-![Screenshot](https://github.com/pmpinto/jekyll-mero/blob/master/screenshot-post.png?raw=true)
+![Screenshot](https://github.com/pmpinto/jekyll-mero/blob/master/screenshots/screenshot-post.png?raw=true)
 
 # Demo
 

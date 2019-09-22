@@ -76,3 +76,4 @@ exclude:
     - assets/javascript/*.es6.js
     - assets/javascript/index.js
     - webpack.config.js
+    - screenshots
