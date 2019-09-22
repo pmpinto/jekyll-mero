@@ -128,7 +128,7 @@ Go back to your favorite editor and open the Jekyll configuration file `_config.
 ## Remove the line with current `theme` you might have, and instead add the following
 
 ```yml
-remote_theme: pmpinto/jekyll-mero`
+remote_theme: pmpinto/jekyll-mero
 ```
 
 ## Add pagination settings
