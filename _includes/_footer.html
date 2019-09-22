@@ -26,16 +26,14 @@
             <li class="footer__item">
                 <a
                     class="footer__link"
-                    href="mailto:{{
-                        site.author.email
-                    }}?subject=Hello%20from%20Mero"
+                    href="mailto:{{ site.author.email }}?subject=Hello%20from%20Mero"
                     >Say hello</a
                 >
             </li>
             <li class="footer__item">
                 <a
                     class="footer__link"
-                    href="/feed.xml"
+                    href="{{ site.baseurl }}/feed.xml"
                     target="_blank"
                     rel="noopener noreferrer"
                     >RSS feed</a
