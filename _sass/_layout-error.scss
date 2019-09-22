@@ -22,6 +22,18 @@
     line-height: $font-line-height-body;
     color: $color-text;
     margin: $spacing-unit-small 0;
+
+    code {
+        font-family: $font-family-heading;
+        background-color: $color-code-background;
+        color: $color-code;
+        border-radius: rem(4.236);
+        padding: 0 $spacing-unit-tiny;
+    }
+
+    p {
+        margin: 0;
+    }
 }
 
 .error__text {
@@ -41,12 +53,4 @@
         text-decoration: underline;
         text-decoration-color: $color-highlight;
     }
-}
-
-.error__code {
-    font-family: $font-family-heading;
-    background-color: $color-code-background;
-    color: $color-code;
-    border-radius: rem(4.236);
-    padding: 0 $spacing-unit-tiny;
 }
