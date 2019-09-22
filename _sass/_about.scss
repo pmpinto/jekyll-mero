@@ -43,10 +43,7 @@
     color: fade-out($color: $color-text, $amount: 0.618);
 }
 
-.about__footer {
+p.about__footer {
     margin-top: $spacing-unit-big;
-
-    .about__text {
-        color: $color-detail;
-    }
+    color: $color-detail;
 }
