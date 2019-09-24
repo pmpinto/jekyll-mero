@@ -249,7 +249,205 @@ Refer to [this](https://realfavicongenerator.net/) or [this](https://favicon.io/
 
 # Options
 
-⚠️ **TODO**: add missing options here.
+## Global (`_config.yml`)
+
+```yml
+tagline: This will show up below the blog title.
+google_analytics_id: UA-AAAAAAAA-2
+```
+
+## About page
+
+In your about page, you should use the `about` layout, like so:
+```yml
+---
+layout: about
+---
+```
+
+And you also have the `heading` property to include a page heading:
+```yml
+---
+layout: about
+heading: All about myself
+---
+```
+
+## Error page
+
+In your error pages you should use the `error` layout and specify an `error_code` property, like so:
+```yml
+---
+layout: error
+error_code: "404"
+---
+```
+
+## Home page
+
+Along with the pagination settings mentioned above you should also use the `home` layout:
+
+```yml
+---
+layout: home
+pagination:
+    enabled: true
+---
+```
+
+## Post page
+
+Regarding front matter, besides the `post` layout, on the post page you have:
+
+```yml
+---
+layout: post
+title: Your awesome post
+date: 2019-08-26 01:00:00 +0100
+categories: [jekyll, markdown, documentation]
+---
+```
+
+Categories will help you group posts together which you will then be able to see at whatever path you configured for `jekyll-archives`. For instance, `/blog/category/markdown`.
+
+### Markdown parsing
+
+Now let's talk about the options you have while writing your posts in markdown. First of all consider using `kramdown` as your markdown parser so you have similar behaviour. It should be the default parser, but you can also specificaly state that in your `_config.yml` like this:
+
+```yml
+markdown: kramdown
+```
+
+With that put aside, feel free to grab an example file of what can be done with markdown/kramdown here: https://github.com/pmpinto/jekyll-mero/blob/master/_posts/2019-08-26-markdown-parsing.md
+
+#### Headings
+
+```markdown
+# H1
+## H2
+### H3
+#### H4
+##### H5
+###### H6
+```
+
+All the headings will have a JavaScript injected link, that points to their own section. This way you can easily share your posts to a specific section.
+
+Note that `h1` will have a smaller size than the post title. Then `h2` will be slightly smaller, and from `h3` to `h6` all of them will have the same visual size. This is to avoid having too many typographic hierarchies.
+
+#### Paragraphs
+
+As usual in markdown parsers, any paragraph you type will be converted into a `p`.
+
+The special thing here is the `.lead` paragraph style which you can apply by pasting `{: .lead }` right below the paragraph. For instance:
+
+```markdown
+This paragraph will look bigger than the others.
+{: .lead }
+```
+
+#### Text styles
+
+These can be applied anywhere you can type text and they can also be mixed together.
+
+```markdown
+This is just an example paragraph to showcase **bold** text, _italic_ and also `code snippets`. You might also need to [link some words](https://github.com/pmpinto/jekyll-mero) here and there.
+
+And as mentioned above, you can have [links with **bold** words](https://github.com/pmpinto/jekyll-mero) as well.
+```
+
+#### Lists
+
+These are pretty straight forward. You can have unordered lists by using a `-` or `*` as a bullet, or an ordered list by using `1.`, `2.`, `3.` and so on. And you can also nest them as you wish. Like so:
+
+```markdown
+1. Item number one
+2. Followed by the second
+3. And lastly the third
+
+* Just an item without a number
+* And another one
+* And yet another one
+
+1. Item one
+    * Sub item
+    * Sub item
+2. Item two
+    * Another sub item
+```
+
+#### Images
+
+Kramdown has a really nice feature for images in a recent version. Unfortunately the GitHub Pages gem, and therefore the environment you would find in the service, is currently using an older version of that gem, so we can't use it here.
+
+The syntax for image tags are basically the same as links, with a prepended `!`:
+
+```markdown
+![This text will show up below the image, as a label](https://via.placeholder.com/1920x1080)
+```
+
+#### Quotes
+
+By prepending any paragraph with a `>` you will get a `blockquote` with special styles applied to it.
+
+```markdown
+Someone once said this:
+
+> There's only so much one can do!
+```
+
+#### Code blocks
+
+Special attention was given to these guys. The goal was to have a reliable and useful way to share small code snippets.
+
+Kramdown provides us with some easy to remember code tags, called `highlight` to which we pass 2 arguments. The first is the language the snippet is using, for instance `html`. And the second one is `linenos` which you either add it to have line numbers in your code block, or you don't. Like so:
+
+```markdown
+{% highlight css linenos %}
+body {
+    background-color: #abcdef;
+    font-size: 18px;
+}
+{% endhighlight %}
+```
+
+You can also use `diff` as the language value, and that will work as expected, that is, how git displays differences between file versions. You should also add a `+` on new lines and `-` on removed lines. Like so:
+
+```markdown
+{% highlight diff linenos %}
+body {
+-   background-color: #abcdef;
++   background-color: #012345;
+    font-size: 18px;
+}
+{% endhighlight %}
+```
+
+#### Tables
+
+Tables are a bit tricky to get right unless you have an automatic formatter. Even though it works without a proper  formatting, it's fairly easier to perceive what's going on with a good formatted table.
+
+```markdown
+|----------+----------|
+| Header 1 | Header 2 |
+|----------|----------|
+| Cell L 1 | Cell R 1 |
+| Cell L 2 | Cell R 2 |
+|----------+----------|
+```
+
+By default tables will be left aligned. If you want to change how a specific row displays the text you have the option to do that in the line of text that separates the headers from the content, with a `:` on the side that you want it to be aligned to. If you add it to both sides, it will be centered.
+
+```markdown
+|----------+----------+----------|
+| Left     | Center   | Right    |
+|----------|:--------:|---------:|
+| Cell L 1 | Cell C 1 | Cell R 1 |
+| Cell L 2 | Cell C 2 | Cell R 2 |
+|----------+----------+----------|
+```
+
+As mentioned above, all the text styles can also be used inside a table.
 
 # Development
 
@@ -264,6 +462,7 @@ exclude:
     - assets/javascript/*.es6.js
     - assets/javascript/index.js
     - webpack.config.js
+    - screenshots
 ```
 
 ## Install dependencies
