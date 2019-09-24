@@ -312,7 +312,7 @@ Categories will help you group posts together which you will then be able to see
 
 ### Markdown parsing
 
-Now let's talk about the options you have while writing your posts in markdown. First of all consider using `kramdown` as your markdown parser so you have similar behaviour. It should be the default parser, but you can also specificaly state that in your `_config.yml` like this:
+Now let's talk about the options you have while writing your posts in markdown. First of all consider using `kramdown` as your markdown parser so you have a similar behaviour. It should be the default parser, but you can also specificaly state that in your `_config.yml` like this:
 
 ```yml
 markdown: kramdown
@@ -339,7 +339,7 @@ Note that `h1` will have a smaller size than the post title. Then `h2` will be s
 
 As usual in markdown parsers, any paragraph you type will be converted into a `p`.
 
-The special thing here is the `.lead` paragraph style which you can apply by pasting `{: .lead }` right below the paragraph. For instance:
+The special thing here is the `.lead` paragraph style which you can apply by adding `{: .lead }` right below the paragraph. For instance:
 
 ```markdown
 This paragraph will look bigger than the others.
@@ -351,7 +351,8 @@ This paragraph will look bigger than the others.
 These can be applied anywhere you can type text and they can also be mixed together.
 
 ```markdown
-This is just an example paragraph to showcase **bold** text, _italic_ and also `code snippets`. You might also need to [link some words](https://github.com/pmpinto/jekyll-mero) here and there.
+This is just an example paragraph to showcase **bold** text, _italic_ and also `code snippets`.  
+You might also need to [link some words](https://github.com/pmpinto/jekyll-mero) here and there.
 
 And as mentioned above, you can have [links with **bold** words](https://github.com/pmpinto/jekyll-mero) as well.
 ```
