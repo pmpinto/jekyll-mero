@@ -157,13 +157,13 @@ window.alert(`yeah! ${window.outerWidth}`)
 
 Everyone loves tables, right? No, not really. But sometimes tables are the most effective way of displaying some specific content. For those cases, and for those cases only, here's a table. With different background on even rows for easier reading as well as highlighted rows on hover.
 
-|-----------------+------------+-----------------+----------------|
-| Default aligned |Left aligned| Center aligned  | Right aligned  |
-|-----------------|:-----------|:---------------:|---------------:|
-| First body part |Second cell | Third cell      | fourth cell    |
-| Second line     |foo         | **strong**      | baz            |
-| Third line      |quux        | baz             | bar            |
-| Second body     |            |                 |                |
-| 2 line          |            |                 |                |
-| Footer row      |            |                 |                |
-|-----------------+------------+-----------------+----------------|
+|-----------------+---------------+-----------------+----------------|
+| Default aligned | Left aligned  | Center aligned  | Right aligned  |
+|-----------------|:--------------|:---------------:|---------------:|
+| First body part | Second cell   | Third cell      | fourth cell    |
+| Second line     | foo           | **strong**      | baz            |
+| Third line      | quux          | baz             | bar            |
+| Second body     |               |                 |                |
+| 2 line          |               |                 |                |
+| Footer row      |               |                 |                |
+|-----------------+---------------+-----------------+----------------|
