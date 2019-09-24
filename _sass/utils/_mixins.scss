@@ -212,6 +212,35 @@
                 line-height: $font-line-height-heading;
                 font-weight: $font-weight-regular;
             }
+
+            .rouge-table {
+                width: 100%;
+            }
+
+            .gi {
+                // Diff added lines
+                background-color: #c6e7b9;
+                color: darken(#c6e7b9, 60%);
+            }
+
+            .gd {
+                // Diff deleted lines
+                background-color: #e7b9c0;
+                color: darken(#e7b9c0, 60%);
+            }
+
+            .gi,
+            .gd {
+                width: 100%;
+                display: block;
+                margin-left: rem(-4.236);
+                padding-right: rem(4.236);
+                border-radius: rem(4.236);
+
+                &::first-letter {
+                    padding-left: rem(4.236);
+                }
+            }
         }
 
         pre {

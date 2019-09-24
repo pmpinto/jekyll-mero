@@ -66,7 +66,7 @@ Or a mix of both
 
 Images may or may not have a label underneath.
 
-![Here's some label for the image.](https://via.placeholder.com/1920x1080){:standalone}
+![Here's some label for the image.](https://via.placeholder.com/1920x1080)
 
 # Quotes
 
@@ -140,6 +140,17 @@ If for some weird reason you don't want line numbers in your code blocks, that's
  */
 
 window.alert(`yeah! ${window.outerWidth}`)
+{% endhighlight %}
+
+
+{% highlight diff linenos %}
+<nav class="nav">
+    <ul class="nav__list">
++       <li class="nav__item">About</li>
+-       <li class="nav__item">Contact</li>
+        <li class="nav__item">Projects</li>
+    </ul>
+</nav>
 {% endhighlight %}
 
 # Tables
