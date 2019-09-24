@@ -59,10 +59,7 @@ defaults:
 # Build settings
 markdown: kramdown
 plugins:
-    - jekyll-feed
-    - jekyll-seo-tag
     - jekyll-paginate-v2
-    - rouge
     - jekyll-archives
 
 # Exclude from processing.
