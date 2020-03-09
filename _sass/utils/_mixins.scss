@@ -166,6 +166,30 @@
         }
     }
 
+    // Horizontal rules
+    hr {
+        width: 67.773%;
+        margin: $spacing-unit-big auto;
+        border: none;
+        border-top: rem(1) solid $color-code-background;
+        height: 0;
+        position: relative;
+
+        &::before {
+            content: "";
+            display: block;
+            position: absolute;
+            width: $spacing-unit-small;
+            height: $spacing-unit-small;
+            border-radius: 50%;
+            left: calc(50% - #{$spacing-unit-small / 2} - 2px);
+            top: calc(50% - #{$spacing-unit-small / 2} - 2px);
+            border: rem(1) solid $color-code-background;
+            background-color: $color-background;
+            box-shadow: 0 0 0 $spacing-unit-tiny $color-background;
+        }
+    }
+
     // Standalone images
     figure {
         margin: $spacing-unit-medium 0;
