@@ -101,14 +101,16 @@
         margin: $spacing-unit-small 0;
         padding-left: $spacing-unit-small;
         list-style: none;
+        margin-left: $spacing-unit-medium;
 
         li {
             &::before {
                 display: inline-block;
                 color: $color-highlight;
-                margin-right: $spacing-unit-small;
                 font-family: $font-family-heading;
                 font-weight: $font-weight-regular;
+                width: $spacing-unit-medium;
+                margin-left: -$spacing-unit-medium;
             }
         }
     }
