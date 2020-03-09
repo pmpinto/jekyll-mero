@@ -25,13 +25,13 @@
                 text-decoration-color: $color-highlight;
 
                 &::before {
-                    display: block;
+                    opacity: 1;
                 }
             }
 
             &::before {
                 content: "§";
-                display: none;
+                display: block;
                 margin-right: $spacing-unit-tiny;
                 color: $color-detail;
                 font-size: 0.618em;
@@ -40,6 +40,7 @@
                 position: absolute;
                 left: -1em;
                 bottom: 0.618em;
+                opacity: 0.618;
             }
         }
     }
