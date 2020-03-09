@@ -49,6 +49,19 @@
 }
 
 .navigation__item--category {
+    .navigation__button {
+        &::before {
+            content: "";
+            cursor: default;
+            display: none;
+            width: 100vw;
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            left: 0;
+        }    
+    }
+
     .navigation__sublist {
         box-sizing: border-box;
         list-style: none;
@@ -114,6 +127,12 @@
 }
 
 .navigation__item--is-open {
+    .navigation__button {
+        &::before {
+            display: block;
+        }
+    }
+
     .navigation__sublist {
         transform: translateY(0) scale(1);
         opacity: 1;
