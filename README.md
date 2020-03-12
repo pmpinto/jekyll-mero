@@ -256,31 +256,50 @@ tagline: This will show up below the blog title.
 google_analytics_id: UA-AAAAAAAA-2
 ```
 
+## Color scheme
+
+Currently, you can pick between three different color schemes: `prefers-dark`, `mocha` and `brand-red`. The first one, `prefers-dark` is special in one way: it will automatically select either a dark or a light color scheme based on the user's OS preferences.
+
+If you don't specify a `color_scheme` in your `config.yml`, the default (black text on white background) will be applied.
+
+Here's an overview of the themes:
+
+| `default`                                                                                                           | `prefers-dark`                                                                                                                | `mocha`                                                                                                         | `brand-red`                                                                                                             |
+| ------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
+| ![Default theme](https://github.com/pmpinto/jekyll-mero/blob/master/screenshots/color-schemes/default.png?raw=true) | ![Dynamic dark theme](https://github.com/pmpinto/jekyll-mero/blob/master/screenshots/color-schemes/prefers-dark.png?raw=true) | ![Mocha theme](https://github.com/pmpinto/jekyll-mero/blob/master/screenshots/color-schemes/mocha.png?raw=true) | ![Brand red theme](https://github.com/pmpinto/jekyll-mero/blob/master/screenshots/color-schemes/brand-red.png?raw=true) |
+| Static                                                                                                              | Dynamic (depends on user's system preferences)                                                                                | Static                                                                                                          | Static                                                                                                                  |
+
 ## About page
 
 In your about page, you should use the `about` layout, like so:
+
 ```yml
 ---
 layout: about
 ---
+
 ```
 
 And you also have the `heading` property to include a page heading:
+
 ```yml
 ---
 layout: about
 heading: All about myself
 ---
+
 ```
 
 ## Error page
 
 In your error pages you should use the `error` layout and specify an `error_code` property, like so:
+
 ```yml
 ---
 layout: error
 error_code: "404"
 ---
+
 ```
 
 ## Home page
@@ -293,6 +312,7 @@ layout: home
 pagination:
     enabled: true
 ---
+
 ```
 
 ## Post page
@@ -306,6 +326,7 @@ title: Your awesome post
 date: 2019-08-26 01:00:00 +0100
 categories: [jekyll, markdown, documentation]
 ---
+
 ```
 
 Categories will help you group posts together which you will then be able to see at whatever path you configured for `jekyll-archives`. For instance, `/blog/category/markdown`.
@@ -324,10 +345,15 @@ With that put aside, feel free to grab an example file of what can be done with 
 
 ```markdown
 # H1
+
 ## H2
+
 ### H3
+
 #### H4
+
 ##### H5
+
 ###### H6
 ```
 
@@ -366,15 +392,15 @@ These are pretty straight forward. You can have unordered lists by using a `-` o
 2. Followed by the second
 3. And lastly the third
 
-* Just an item without a number
-* And another one
-* And yet another one
+-   Just an item without a number
+-   And another one
+-   And yet another one
 
 1. Item one
-    * Sub item
-    * Sub item
+    - Sub item
+    - Sub item
 2. Item two
-    * Another sub item
+    - Another sub item
 ```
 
 #### Images
@@ -397,6 +423,18 @@ Someone once said this:
 > There's only so much one can do!
 ```
 
+#### Horizontal rules
+
+Whem you need to separate two blocks of content you can do so by placing an horizontal rule between the two blocks. In markdown you can do so by placing `---`.
+
+```markdown
+This is the first paragraph.
+
+---
+
+This is the second paragraph.
+```
+
 #### Code blocks
 
 Special attention was given to these guys. The goal was to have a reliable and useful way to share small code snippets.
@@ -406,8 +444,8 @@ Kramdown provides us with some easy to remember code tags, called `highlight` to
 ```markdown
 {% highlight css linenos %}
 body {
-    background-color: #abcdef;
-    font-size: 18px;
+background-color: #abcdef;
+font-size: 18px;
 }
 {% endhighlight %}
 ```
@@ -417,16 +455,18 @@ You can also use `diff` as the language value, and that will work as expected, t
 ```markdown
 {% highlight diff linenos %}
 body {
+
 -   background-color: #abcdef;
-+   background-color: #012345;
+
+*   background-color: #012345;
     font-size: 18px;
-}
-{% endhighlight %}
+    }
+    {% endhighlight %}
 ```
 
 #### Tables
 
-Tables are a bit tricky to get right unless you have an automatic formatter. Even though it works without a proper  formatting, it's fairly easier to perceive what's going on with a good formatted table.
+Tables are a bit tricky to get right unless you have an automatic formatter. Even though it works without a proper formatting, it's fairly easier to perceive what's going on with a good formatted table.
 
 ```markdown
 |----------+----------|
@@ -441,7 +481,7 @@ By default tables will be left aligned. If you want to change how a specific row
 
 ```markdown
 |----------+----------+----------|
-| Left     | Center   | Right    |
+| Left | Center | Right |
 |----------|:--------:|---------:|
 | Cell L 1 | Cell C 1 | Cell R 1 |
 | Cell L 2 | Cell C 2 | Cell R 2 |

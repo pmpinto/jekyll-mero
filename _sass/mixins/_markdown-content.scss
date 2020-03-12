@@ -32,7 +32,7 @@
             &::before {
                 content: "§";
                 display: block;
-                margin-right: $spacing-unit-tiny;
+                padding-right: $spacing-unit-tiny;
                 color: $color-detail;
                 font-size: 0.618em;
                 font-family: $font-family-body;
@@ -227,6 +227,7 @@
             display: block;
             padding: $spacing-unit-small;
             overflow-x: scroll;
+            border-radius: rem(4.236);
 
             &::before {
                 content: attr(data-lang);
@@ -306,9 +307,6 @@
 
         tbody {
             tr {
-                // transition: transform $transition-fast,
-                // box-shadow $transition-fast;
-
                 &:nth-child(even) {
                     td {
                         background-color: fade-out($color: $color-detail, $amount: 0.892);

@@ -36,6 +36,14 @@
 
         <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/jekyll-mero.css" />
 
+        {% if site.color_scheme == "prefers-dark" %}
+        <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/themes/theme-prefers-dark.css" />
+        {% elsif site.color_scheme == "mocha" %}
+        <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/themes/theme-mocha.css" />
+        {% elsif site.color_scheme == "brand-red" %}
+        <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/themes/theme-brand-red.css" />
+        {% endif %}
+
         {% seo %}
     </head>
 

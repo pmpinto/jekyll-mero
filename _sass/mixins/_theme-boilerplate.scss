@@ -1,0 +1,333 @@
+// Boilerplate to easily generate new themes
+@mixin theme-boilerplate(
+    $color-background,
+    $color-text,
+    $color-detail,
+    $color-code,
+    $color-code-background,
+    $color-highlight,
+    $color-diff-added,
+    $color-diff-removed
+) {
+    body,
+    html {
+        background-color: $color-background;
+        color: $color-text;
+    }
+
+    ::selection {
+        background: fade-out($color: $color-text, $amount: 0.618);
+        color: $color-background;
+    }
+
+    ::-moz-selection {
+        background: fade-out($color: $color-text, $amount: 0.618);
+        color: $color-background;
+    }
+
+    .post__content {
+        color: $color-text;
+
+        h1 a,
+        h2 a,
+        h3 a,
+        h4 a,
+        h5 a,
+        h6 a {
+            color: $color-text;
+
+            &:hover {
+                text-decoration-color: $color-highlight;
+            }
+
+            &::before {
+                color: $color-highlight;
+            }
+        }
+
+        a {
+            color: $color-highlight;
+            text-decoration-color: fade-out($color: $color-highlight, $amount: 0.854);
+
+            &:hover {
+                text-decoration-color: $color-highlight;
+            }
+    
+        }
+
+        ul,
+        ol {
+            li {
+                &::before {
+                    color: $color-highlight;
+                }
+            }
+        }
+
+        code {
+            color: $color-code;
+            background-color: $color-code-background;
+        }
+
+        figure.highlight {
+            .lineno {
+                color: fade-out($color: $color-code, $amount: 0.618);
+            }
+    
+            code {
+                .gi {
+                    // Diff added lines
+                    background-color: darken($color-diff-added, 60%);
+                    color: $color-diff-added;
+                }
+    
+                .gd {
+                    // Diff deleted lines
+                    background-color: darken($color-diff-removed, 60%);
+                    color: $color-diff-removed;
+                }
+
+                &::before {
+                    color: $color-code;
+                }
+            }
+        }
+
+        figure {
+            figcaption {
+                color: $color-detail;
+            }
+        }
+
+        hr {
+            border-color: fade-out($color: $color-detail, $amount: 0.892);
+
+            &::before {
+                background-color: $color-background;
+                box-shadow: 0 0 0 $spacing-unit-tiny $color-background;
+                border-color: fade-out($color: $color-detail, $amount: 0.892);
+            }
+        }
+
+        blockquote {
+            background-color: $color-code-background;
+
+            &::before {
+                color: $color-detail;
+            }
+
+            p {
+                color: $color-code;
+            }
+        }
+
+        table:not(.rouge-table) {
+            th {
+                color: $color-detail;
+                background-color: darken($color: $color-background, $amount: 1.618);
+            }
+
+            td {
+                color: $color-text;
+                background-color: $color-background;
+            }
+
+            tbody {
+                tr {
+                    &:nth-child(even) {
+                        td {
+                            background-color: fade-out($color: $color-detail, $amount: 0.892);
+                        }
+                    }
+    
+                    &:hover {
+                        td {
+                            background-color: fade-out($color: $color-detail, $amount: 0.618);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .navigation {
+        background-color: $color-background;
+        border-color: fade-out($color: $color-detail, $amount: 0.854);
+
+        .navigation__link,
+        .navigation__button {
+            color: $color-text;
+            text-decoration-color: fade-out($color: $color-text, $amount: 0.854);
+
+            &:hover {
+                color: $color-highlight;
+                text-decoration-color: $color-highlight;
+            }
+        }
+
+        .navigation__muted {
+            color: fade-out($color: $color-text, $amount: 0.618);
+        }
+
+        .navigation__amount {
+            color: $color-detail;
+        }
+
+        .navigation__sublist {
+            background-color: $color-background;
+            color: $color-text;
+            border-color: fade-out($color: $color-detail, $amount: 0.854);
+        }
+    }
+
+    .about {
+        .about__title {
+            color: $color-text;
+        }
+
+        .about__text,
+        .about__content p {
+            color: $color-text;
+        }
+
+        .about__link,
+        .about__content a {
+            color: $color-highlight;
+            text-decoration-color: fade-out($color: $color-highlight, $amount: 0.854);
+
+            &:hover {
+                text-decoration-color: $color-highlight;
+            }
+        }
+
+        .about__muted {
+            color: fade-out($color: $color-text, $amount: 0.618);
+        }
+
+        p.about__footer {
+            color: $color-detail;
+        }
+    }
+
+    .article-list {
+        padding: 0;
+
+        .article-list__link {
+            color: $color-text;
+        
+            &:hover {
+                text-decoration-color: $color-highlight;
+            }
+        }
+        
+        .article-list__excerpt {
+            color: $color-text;
+        }
+    }
+
+    .author {
+        color: $color-text;
+
+        .author__text {
+            color: $color-detail;
+        }
+        
+        .author__at {
+            color: fade-out($color: $color-highlight, $amount: 0.618);
+        }
+        
+        .author__link {
+            color: $color-highlight;
+            text-decoration-color: fade-out($color: $color-highlight, $amount: 0.854);
+        
+            &:hover {
+                text-decoration-color: $color-highlight;
+            }
+        }
+    }
+
+    .category-list {
+        &::before {
+            color: $color-highlight;
+        }
+
+        .category-list__link {
+            color: $color-highlight;
+            text-decoration-color: fade-out($color: $color-highlight, $amount: 0.854);
+        
+            &:hover {
+                color: $color-highlight;
+                text-decoration-color: $color-highlight;
+            }
+        }
+        
+        .category-list__hashtag {
+            color: fade-out($color: $color-highlight, $amount: 0.618);
+        }
+    }
+
+    .footer {
+        .footer__text {
+            color: $color-detail;
+        }
+        
+        .footer__link {
+            color: $color-highlight;
+            text-decoration-color: fade-out($color: $color-highlight, $amount: 0.854);
+        
+            &:hover {
+                text-decoration-color: $color-highlight;
+            }
+        }
+    }
+    
+    .header {
+        .header__title {
+            color: $color-text;
+        
+            &::after {
+                color: $color-brand;
+            }
+        }
+        
+        .header__tagline {
+            color: $color-detail;
+        }
+    }
+    
+    .category__heading {
+        color: $color-detail;
+    }
+    
+    .category__muted {
+        color: fade-out($color: $color-text, $amount: 0.618);
+    }
+    
+    .pagination {
+        .pagination__link {
+            color: $color-text;
+        
+            &:hover {
+                border-color: $color-highlight;
+            }
+        }
+        
+        .pagination__link--disabled {
+            color: $color-detail;
+        }
+        
+        .pagination__link--active {
+            color: $color-highlight;
+        }
+    }
+
+    .post {
+        .post__title {
+            color: $color-text;
+        }
+        
+        .post__date {
+            color: $color-detail;
+        }
+    }
+}

@@ -1,0 +1,40 @@
+---
+sitemap: false
+---
+
+@import "_variables";
+@import "../syntax-highlight-prefers-dark.css";
+@import "mixins/_theme-boilerplate";
+
+$color-background: $color-grey;
+$color-text: $color-black;
+$color-detail: darken(
+    $color: $color-black,
+    $amount: 16%
+);
+$color-code: $color-grey;
+$color-code-background: darken(
+    $color: $color-background,
+    $amount: 25.888%
+);
+$color-highlight: $color-orange;
+$color-diff-added: lighten(
+    $color: #c6e7b9,
+    $amount: 16%
+);
+$color-diff-removed: lighten(
+    $color: #e7b9c0,
+    $amount: 16%
+);
+
+@include theme-boilerplate(
+    $color-background,
+    $color-text,
+    $color-detail,
+    $color-code,
+    $color-code-background,
+    $color-highlight,
+    $color-diff-added,
+    $color-diff-removed
+);
+

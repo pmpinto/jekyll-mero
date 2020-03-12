@@ -84,7 +84,7 @@
         border-radius: rem(4.236);
         border: rem(1) solid fade-out($color: $color-text, $amount: 0.854);
         box-shadow: rem(2.618) 0 rem(29.03)
-            fade-out($color: $color-text, $amount: 0.854);
+            fade-out($color: #000, $amount: 0.854);
         transform: translateY(rem(41.887)) scale(0.8);
         transition: transform $transition-fast, opacity $transition-fast;
         will-change: transform;

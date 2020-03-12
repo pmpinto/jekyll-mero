@@ -1,0 +1,41 @@
+---
+sitemap: false
+---
+
+@import "_variables";
+@import "../syntax-highlight-prefers-dark.css";
+@import "mixins/_theme-boilerplate";
+
+@media (prefers-color-scheme: dark) {
+    $color-background: $color-black;
+    $color-text: $color-white;
+    $color-detail: lighten(
+        $color: $color-grey,
+        $amount: 6.854%
+    );
+    $color-code: lighten(
+        $color: $color-detail,
+        $amount: 6.854%
+    );
+    $color-code-background: fade-out(
+        $color: $color-detail,
+        $amount: 0.854
+    );
+    $color-highlight: lighten(
+        $color: $color-red,
+        $amount: 6.854%
+    );
+    $color-diff-added: #c6e7b9;
+    $color-diff-removed: #e7b9c0;
+
+    @include theme-boilerplate(
+        $color-background,
+        $color-text,
+        $color-detail,
+        $color-code,
+        $color-code-background,
+        $color-highlight,
+        $color-diff-added,
+        $color-diff-removed
+    );
+}

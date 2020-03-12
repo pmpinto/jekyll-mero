@@ -72,6 +72,8 @@ Images may or may not have a label underneath.
 
 Or just highlighted bits and pieces from long articles.
 
+> Feels super inspirational, even when it doesn't make any sense.
+
 # Horizontal rules
 
 You can add a rule by placing at least three consecutive dashes between two elements, which will result in this:
@@ -81,8 +83,6 @@ This is the first paragraph.
 ---
 
 This is the second paragraph.
-
-> Feels super inspirational, even when it doesn't make any sense.
 
 # Code blocks
 
