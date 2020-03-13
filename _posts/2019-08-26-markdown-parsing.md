@@ -3,7 +3,7 @@ layout: post
 title: Markdown parsing
 date: 2019-08-26 01:00:00 +0100
 categories: [jekyll, markdown, documentation]
-
+custom_excerpt: In this blog post, you'll learn how to use markdown in your favour. Get to know how markdown is being parsed and how you can style your posts the best way.
 ---
 
 Here's an overview of what you can expect to do with kramdown, the markdown parser used in Mero.

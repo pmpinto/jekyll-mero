@@ -8,7 +8,11 @@
                 >{{ post.title }}</a
             >
         </h3>
+        {% if post.custom_excerpt %}
+        <p class="article-list__excerpt">{{ post.custom_excerpt | strip_html }}</p>
+        {% else %}
         <p class="article-list__excerpt">{{ post.excerpt | strip_html }}</p>
+        {% endif %}
     </li>
     {% endfor %}
 </ol>

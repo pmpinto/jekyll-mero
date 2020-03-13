@@ -325,6 +325,7 @@ layout: post
 title: Your awesome post
 date: 2019-08-26 01:00:00 +0100
 categories: [jekyll, markdown, documentation]
+custom_excerpt: This text will have precedence as an excerpt over the usual and default first paragraph of text.
 ---
 
 ```
