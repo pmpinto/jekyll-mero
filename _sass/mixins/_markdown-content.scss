@@ -67,6 +67,11 @@
         }
     }
 
+    // Photo slider
+    p.photo-slider {
+        display: none;
+    }
+
     // Highlighted paragraphs
     p.lead {
         font-size: $font-size-subheading;
@@ -97,8 +102,8 @@
     }
 
     // Unordered and ordered lists
-    ul,
-    ol {
+    > ul,
+    > ol {
         margin: $spacing-unit-small 0;
         padding-left: $spacing-unit-small;
         list-style: none;
@@ -116,7 +121,7 @@
         }
     }
 
-    ul {
+    > ul {
         > li {
             &::before {
                 content: "•";
@@ -125,7 +130,7 @@
         }
     }
 
-    ol {
+    > ol {
         counter-reset: ordered-list-item-count;
 
         > li {

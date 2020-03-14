@@ -414,6 +414,19 @@ The syntax for image tags are basically the same as links, with a prepended `!`:
 ![This text will show up below the image, as a label](https://via.placeholder.com/1920x1080)
 ```
 
+#### Photo sliders
+
+For those times when you have more than 1 image to display, you can use one of these.
+Just place a bunch of URLs (not links, just the URLs) in a paragraph and then end the paragraph with just `{: .photo-slider }` in the last line.
+These links will later be transformed into an horizontal photo slider.
+
+```markdown
+https://cdn.shopify.com/s/files/1/2959/2384/products/ngogeokbcatt_large.jpg?v=1524987693
+https://www.nationalgeographic.com/content/dam/news/2015/04/09/promo/step-cat-staircase-promo.ngsversion.1428612902610.png
+http://pmdvod.nationalgeographic.com/NG_Video/802/635/160328-news-cat-dialects-vin_thumbnail_ds1602001-47_640x360_653681219883.jpg
+{: .photo-slider }
+```
+
 #### Quotes
 
 By prepending any paragraph with a `>` you will get a `blockquote` with special styles applied to it.

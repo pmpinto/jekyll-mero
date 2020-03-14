@@ -330,4 +330,16 @@
             color: $color-detail;
         }
     }
+
+    .photo-slider {
+        .photo-slider__photo {
+            border-color: lighten($color: $color-background, $amount: 6.854%);
+            background-color: darken($color: $color-background, $amount: 6.854%);
+        }
+
+        .photo-slider__link {
+            background-color: $color-text;
+        }
+        
+    }
 }

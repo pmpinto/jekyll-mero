@@ -1,6 +1,7 @@
-import { Category } from "./Category.es6.js"
-import { Headings } from "./Headings.es6.js"
-import { Images } from "./Images.es6.js"
+import { Category } from "./Category.es6"
+import { Headings } from "./Headings.es6"
+import { Images } from "./Images.es6"
+import { PhotoSlider } from "./PhotoSlider.es6"
 
 class App {
     init() {
@@ -18,6 +19,10 @@ class App {
         // Images in posts
         const images = new Images()
         images.init()
+
+        // Image sliders in posts
+        const photoSlider = new PhotoSlider()
+        photoSlider.init()
     }
 
     letTransitionsRoll() {

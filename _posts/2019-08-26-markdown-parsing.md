@@ -8,6 +8,22 @@ custom_excerpt: In this blog post, you'll learn how to use markdown in your favo
 
 Here's an overview of what you can expect to do with kramdown, the markdown parser used in Mero.
 
+# Photo slider
+
+Here's an example of what it looks like:
+
+https://cdn.shopify.com/s/files/1/2959/2384/products/ngogeokbcatt_large.jpg?v=1524987693
+https://www.nationalgeographic.com/content/dam/news/2015/04/09/promo/step-cat-staircase-promo.ngsversion.1428612902610.png
+this is not a photo
+http://pmdvod.nationalgeographic.com/NG_Video/802/635/160328-news-cat-dialects-vin_thumbnail_ds1602001-47_640x360_653681219883.jpg
+{: .photo-slider }
+
+And here's another one just to test multiple on the same page:
+
+http://pmdvod.nationalgeographic.com/NG_Video/802/635/160328-news-cat-dialects-vin_thumbnail_ds1602001-47_640x360_653681219883.jpg
+https://cdn.shopify.com/s/files/1/2959/2384/products/ngogeokbcatt_large.jpg?v=1524987693
+{: .photo-slider }
+
 # Headings
 
 Each heading will have a unique and automatically generated `id` attribute as well as a link, so you can easily point people directly to the section you want to.
