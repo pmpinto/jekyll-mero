@@ -52,7 +52,8 @@ class PhotoSlider {
                     .closest(".photo-slider")
                     .querySelector(`.photo-slider__photo[data-index="${targetPhotoIndex}"]`)
 
-                photo.parentElement.scrollLeft = photo.offsetLeft
+                photo.parentElement.scrollLeft =
+                    window.outerWidth / -2 + photo.offsetLeft + photo.offsetWidth / 2
             }
         })
     }
