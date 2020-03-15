@@ -1,6 +1,6 @@
 class PhotoSlider {
     constructor() {
-        this.urlRegex = /^(https?:\/\/)([\w\-\.]+)([\w\/?=%\.\-&]+)(\/.+)$/g
+        this.urlRegex = /^(https?:\/\/)([\w\-\.:]+)([\w\/?=%\.\-&]+)(\/.+)$/g
         this.sliders = document.querySelectorAll(".post__content p.photo-slider")
     }
 
