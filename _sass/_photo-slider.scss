@@ -33,6 +33,7 @@ $navigation-width: calc(6.854vw + #{rem(1)});
     margin-right: rem(4);
     scroll-snap-align: center center;
     height: 50vh;
+    min-width: 50vw;
     pointer-events: none;
     border-radius: rem(4.236);
     object-fit: cover;
@@ -46,7 +47,7 @@ $navigation-width: calc(6.854vw + #{rem(1)});
     }
 
     @media ($lg) {
-        height: 30vw;
+        height: 37vw;
     }
 }
 
