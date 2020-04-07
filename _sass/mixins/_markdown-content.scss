@@ -104,7 +104,11 @@
 
     // Unordered and ordered lists
     > ul,
-    > ol {
+    > ul ul,
+    > ul ol,
+    > ol,
+    > ol ul,
+    > ol ol {
         margin: $spacing-unit-small 0;
         padding-left: $spacing-unit-small;
         list-style: none;
@@ -124,7 +128,9 @@
         }
     }
 
-    > ul {
+    > ul,
+    > ul ul,
+    > ol ul {
         > li {
             &::before {
                 content: "•";
@@ -133,7 +139,9 @@
         }
     }
 
-    > ol {
+    > ol,
+    > ol ol,
+    > ul ol {
         counter-reset: ordered-list-item-count;
 
         > li {
