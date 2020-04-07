@@ -3,11 +3,14 @@
 // #################################################################################################
 // Type
 
-$font-family-sans: "work-sans", sans-serif;
-$font-family-mono: "space-mono", monospace;
+$font-family-serif: "Roboto Slab", serif;
+$font-family-sans: "Roboto Condensed", sans-serif;
+$font-family-mono: "Roboto Mono", monospace;
+$font-family-brand: "Roboto", sans-serif;
 
-$font-family-heading: $font-family-mono;
-$font-family-body: $font-family-sans;
+$font-family-heading: $font-family-sans;
+$font-family-body: $font-family-serif;
+$font-family-code: $font-family-mono;
 
 $font-size-mega: rem(177.424);
 $font-size-jumbo: rem(67.773);
@@ -22,6 +25,7 @@ $font-line-height-heading: 1;
 $font-weight-light: 200;
 $font-weight-regular: 400;
 $font-weight-bold: 600;
+$font-weight-black: 900;
 
 // #################################################################################################
 // Spacing
@@ -49,11 +53,11 @@ $color-detail: $color-grey;
 
 $color-code-background: fade-out(
     $color: $color-detail,
-    $amount: 0.854
+    $amount: 0.854,
 );
 $color-code: darken(
     $color: $color-detail,
-    $amount: 6.854%
+    $amount: 6.854%,
 );
 
 // #################################################################################################

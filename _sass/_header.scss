@@ -3,13 +3,13 @@
 }
 
 .header__title {
-    font-family: $font-family-body;
+    font-family: $font-family-brand;
     line-height: $font-line-height-heading;
     font-size: $font-size-jumbo;
-    font-weight: $font-weight-bold;
+    font-weight: $font-weight-black;
     color: $color-text;
     margin: 0;
-    letter-spacing: rem(-4);
+    letter-spacing: rem(-2);
     margin-left: rem(-4);
 
     &::after {
