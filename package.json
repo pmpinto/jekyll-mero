@@ -1,6 +1,6 @@
 {
     "name": "jekyll-mero",
-    "version": "1.5.2",
+    "version": "1.5.3",
     "description": "A light-weight and minimal theme for Jekyll.",
     "private": true,
     "scripts": {

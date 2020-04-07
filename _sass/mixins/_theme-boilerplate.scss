@@ -52,7 +52,6 @@
             &:hover {
                 text-decoration-color: $color-highlight;
             }
-    
         }
 
         ul,
@@ -73,14 +72,14 @@
             .lineno {
                 color: fade-out($color: $color-code, $amount: 0.618);
             }
-    
+
             code {
                 .gi {
                     // Diff added lines
                     background-color: darken($color-diff-added, 60%);
                     color: $color-diff-added;
                 }
-    
+
                 .gd {
                     // Diff deleted lines
                     background-color: darken($color-diff-removed, 60%);
@@ -110,14 +109,18 @@
         }
 
         blockquote {
-            background-color: $color-code-background;
-
-            &::before {
+            &::before,
+            &::after {
+                background-color: $color-code-background;
                 color: $color-detail;
+                text-shadow: 0 rem(2) $color-background, 0 rem(4) $color-background,
+                    rem(2) 0 $color-background, rem(4) 0 $color-background,
+                    rem(-2) 0 $color-background, rem(-4) 0 $color-background,
+                    0 rem(-2) $color-background, 0 rem(-4) $color-background;
             }
 
             p {
-                color: $color-code;
+                color: $color-detail;
             }
         }
 
@@ -139,7 +142,7 @@
                             background-color: fade-out($color: $color-detail, $amount: 0.892);
                         }
                     }
-    
+
                     &:hover {
                         td {
                             background-color: fade-out($color: $color-detail, $amount: 0.618);
@@ -214,12 +217,12 @@
 
         .article-list__link {
             color: $color-text;
-        
+
             &:hover {
                 text-decoration-color: $color-highlight;
             }
         }
-        
+
         .article-list__excerpt {
             color: $color-text;
         }
@@ -231,15 +234,15 @@
         .author__text {
             color: $color-detail;
         }
-        
+
         .author__at {
             color: fade-out($color: $color-highlight, $amount: 0.618);
         }
-        
+
         .author__link {
             color: $color-highlight;
             text-decoration-color: fade-out($color: $color-highlight, $amount: 0.854);
-        
+
             &:hover {
                 text-decoration-color: $color-highlight;
             }
@@ -254,13 +257,13 @@
         .category-list__link {
             color: $color-highlight;
             text-decoration-color: fade-out($color: $color-highlight, $amount: 0.854);
-        
+
             &:hover {
                 color: $color-highlight;
                 text-decoration-color: $color-highlight;
             }
         }
-        
+
         .category-list__hashtag {
             color: fade-out($color: $color-highlight, $amount: 0.618);
         }
@@ -270,52 +273,52 @@
         .footer__text {
             color: $color-detail;
         }
-        
+
         .footer__link {
             color: $color-highlight;
             text-decoration-color: fade-out($color: $color-highlight, $amount: 0.854);
-        
+
             &:hover {
                 text-decoration-color: $color-highlight;
             }
         }
     }
-    
+
     .header {
         .header__title {
             color: $color-text;
-        
+
             &::after {
                 color: $color-brand;
             }
         }
-        
+
         .header__tagline {
             color: $color-detail;
         }
     }
-    
+
     .category__heading {
         color: $color-detail;
     }
-    
+
     .category__muted {
         color: fade-out($color: $color-text, $amount: 0.618);
     }
-    
+
     .pagination {
         .pagination__link {
             color: $color-text;
-        
+
             &:hover {
                 border-color: $color-highlight;
             }
         }
-        
+
         .pagination__link--disabled {
             color: $color-detail;
         }
-        
+
         .pagination__link--active {
             color: $color-highlight;
         }
@@ -325,7 +328,7 @@
         .post__title {
             color: $color-text;
         }
-        
+
         .post__date {
             color: $color-detail;
         }
@@ -340,6 +343,5 @@
         .photo-slider__link {
             background-color: $color-text;
         }
-        
     }
 }

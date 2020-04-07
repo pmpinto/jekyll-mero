@@ -56,6 +56,7 @@
     // Paragraphs
     p {
         margin: $spacing-unit-medium 0;
+        font-weight: $font-weight-regular;
 
         code {
             padding: 0 $spacing-unit-tiny;
@@ -110,6 +111,8 @@
         margin-left: $spacing-unit-medium;
 
         li {
+            font-weight: $font-weight-regular;
+
             &::before {
                 display: inline-block;
                 color: $color-highlight;
@@ -149,26 +152,33 @@
         display: flex;
         align-items: flex-start;
         position: relative;
-        background-color: $color-code-background;
-        border-radius: rem(4.236);
+        text-align: center;
+        flex-wrap: wrap;
 
-        &::before {
-            content: "“";
+        &::before,
+        &::after {
+            content: "“ ”";
+            display: block;
+            height: rem(1);
+            width: 25.888%;
+            margin: $spacing-unit-medium auto;
+            background-color: $color-code-background;
             color: $color-detail;
-            font-family: $font-family-heading;
-            font-size: $font-size-mega;
-            line-height: $font-line-height-heading;
-            position: absolute;
-            left: calc(-#{$spacing-unit-medium} - #{$spacing-unit-tiny});
-            top: calc(-#{$spacing-unit-medium} - #{$spacing-unit-medium});
-            pointer-events: none;
+            font-size: $font-size-heading;
+            line-height: 0.5;
+            font-weight: $font-weight-light;
+            font-family: $font-family-body;
+            text-shadow: 0 rem(2) $color-background, 0 rem(4) $color-background,
+                rem(2) 0 $color-background, rem(4) 0 $color-background, rem(-2) 0 $color-background,
+                rem(-4) 0 $color-background, 0 rem(-2) $color-background,
+                0 rem(-4) $color-background;
         }
 
         p {
-            margin: $spacing-unit-medium $spacing-unit-medium;
+            margin: 0 $spacing-unit-medium;
             font-family: $font-family-body;
             font-size: $font-size-subheading;
-            color: $color-text;
+            color: $color-detail;
             line-height: $font-line-height-body;
             font-weight: $font-weight-regular;
         }
