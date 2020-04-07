@@ -240,7 +240,7 @@
                 right: $spacing-unit-tiny;
                 top: $spacing-unit-tiny;
                 color: $color-code;
-                font-family: $font-family-heading;
+                font-family: $font-family-code;
                 font-size: $font-size-caption;
                 line-height: $font-line-height-heading;
                 font-weight: $font-weight-regular;
@@ -277,7 +277,7 @@
         }
 
         pre {
-            font-family: $font-family-heading;
+            font-family: $font-family-code;
             margin: 0;
             font-size: $font-size-body;
         }
