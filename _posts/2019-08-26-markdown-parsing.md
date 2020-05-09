@@ -84,6 +84,8 @@ Images may or may not have a label underneath.
 
 ![Here's some label for the image.](https://via.placeholder.com/1920x1080)
 
+![Here's some label for the image.](https://via.placeholder.com/300x400)
+
 # Quotes
 
 Or just highlighted bits and pieces from long articles.
